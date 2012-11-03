@@ -7,7 +7,7 @@ class Pass:
         decode = self.url_text.decode("utf-8","replace")
 
 
-    def blockquote(self):
+    def base(self):
         soup = BeautifulSoup(self.url_text)
         self.retrunt = soup
         self.left = soup.findAll(attrs={"class":"teams"} )
@@ -27,7 +27,7 @@ class Pass:
         
     
 pas = Pass("http://baseball.yahoo.co.jp/npb/schedule/?&date=20120801")
-pas.blockquote()
+pas.base()
 """print pas.prett"""
 ##print pas.left
 ##print pas.right
